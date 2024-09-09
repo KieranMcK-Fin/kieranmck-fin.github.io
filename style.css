@@ -60,6 +60,10 @@ body > main article {
     justify-content: center;
 }
 
+body > h4 {
+    justify-content: center;
+}
+
 #main-content {
     display: flex;
     justify-content: space-around;
