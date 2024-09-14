@@ -1,108 +1,100 @@
+header {
+    background-color: #1B2431;
+    color: white;
+}
+
 body { 
+    background-color: #016795;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0%;
+    padding: 0;
     font-size: 1.5vw;
 }
 
-#logo {
-   
-    margin: 0%;
-    padding: 8;
-    font-family: "Fredoka One", sans-serif;
-    /* box-shadow: 8px 8px 10px 3px darkorange;
-    width: 16%;
-    text-shadow: 
-    1px 1px 0px black,  /*bottom-right shadow */
-   /* -1px 1px 0px black, /*bottom-left shadow */
-   /* 1px -1px 0px black, /*top-right shadow */
-   /* -1px -1px 0px black; top-left shadow */
-}
-
-ul {
-    margin: 0%;
-}
-
-body > header > nav > ul {
-    list-style: none;
-    text-decoration: none;
-}
-
-body > header {
-    background-color: orange;
-    color: rgb(30, 132, 196); 
-    /* use lol colours website */
+#nav_buttons ul {
+    list-style: none; /* Removes bullet points */
     display: flex;
-    height: 22vh;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 2%; /* Removes default padding */
+    margin: 0%;  /* Removes default margin */
 }
 
-#nav-ul {
-    display: flex;
-}
-
-#nav-ul > li {
-padding: 8px;
-margin: 30px;
-}
-
-.navbutton {
-    color: white;
-    text-decoration: orange;
-    padding: 12px;
-    border: 1px solid white;
+#nav_buttons ul li {
+    margin: 0 75px; /* Adds spacing between links */
+    padding: 0.5%;
+    border: 2px, solid white;
     border-radius: 10%;
 }
 
-body > main article {
-    width: 70%;
-    margin: auto;
-    justify-content: center;
+#nav_buttons a {
+    color: #FAFAD2;
+    text-decoration: none; /* Removes underline from links */
 }
 
-body > h4 {
-    justify-content: center;
-}
-
-#main-content {
-    display: flex;
-    justify-content: space-around;
-    
-}
-
-#main-content > div {
-    width: 70%;
-}
-
-form {
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-}
-
-body > footer {
-    background-color: orange;
-    display: flex;
-}
-
-img {
+#image {
     border-radius: 50%;
 }
 
-#footer-ul {
+#main_article {
+    background-color: #016795;
+    color: #DCDCDC;
+    margin: 0;
+    padding: 1%;
     display: flex;
-    list-style: none;
+    margin-left: 5%;
+    margin-right: 8%;
 }
 
-#footer-ul > div {
-    margin-left: 12px;
+#gcses {
+    margin-bottom: 2.5%;
 }
 
-#footer-ul > div > li > a {
-    text-decoration: none;
-    color: white;
+#a_levels {
+    margin-bottom: 2.5%;
 }
 
-/* Use website CSS Tricks for learning or questions */
+#education {
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+}
+
+.tp_icap_title ul {
+    list-style: disc; /* Ensures bullet points are displayed */
+    padding-left: 5%; /* Space for bullet points */
+    margin-left: 0; /* Removes default margin */
+}
+
+.tp_icap_title li {
+    margin-bottom: 10px; /* Adds space between list items */
+}
+
+.text-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+}
+
+.text-image {
+    margin-right: 2%; /* Space between the image and the text */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+#tp_icap_title h4 {
+    margin: 0; /* Removes default margins from the heading */
+}
+
+#tp_icap_text {
+    padding: 0;
+    margin-left: 5.5%;
+}
+
+/* display: flex;
+justify-content
+align-items */
+
+/* colour pallet:
+blocky dark
+#1B2431
+inhaling peacock blue
+#016795
+ordained cobalt
+#1E488F */
