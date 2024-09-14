@@ -12,23 +12,23 @@ body {
 }
 
 #nav_buttons ul {
-    list-style: none; /* Removes bullet points */
+    list-style: none; 
     display: flex;
     justify-content: center;
-    padding: 2%; /* Removes default padding */
-    margin: 0%;  /* Removes default margin */
+    padding: 2%; 
+    margin: 0%;  
 }
 
 #nav_buttons ul li {
-    margin: 0 75px; /* Adds spacing between links */
+    margin: 0 75px; 
     padding: 0.5%;
-    border: 0.125vw solid white; /* Corrected border syntax */
+    border: 0.125vw solid white; 
     border-radius: 10%;
 }
 
 #nav_buttons a {
     color: #FAFAD2;
-    text-decoration: none; /* Removes underline from links */
+    text-decoration: none; 
 }
 
 #image {
@@ -45,6 +45,19 @@ body {
     margin-right: 8%;
 }
 
+#at_a_glance {
+    margin-top: 10%;
+}
+
+.underscore-line {
+    border: none;
+    border-top: 2px solid #DCDCDC; 
+    width: 100%; 
+    margin: 0; 
+    margin-top: 0%;
+    margin-bottom: 7.5%;
+}
+
 #gcses {
     margin-bottom: 2.5%;
 }
@@ -54,32 +67,32 @@ body {
 }
 
 #education {
-    margin-top: 7.5%;
+    margin-top: 10%;
     margin-bottom: 7.5%;
 }
 
 .tp_icap_title ul {
-    list-style: disc; /* Ensures bullet points are displayed */
-    padding-left: 5%; /* Space for bullet points */
-    margin-left: 0; /* Removes default margin */
+    list-style: disc; 
+    padding-left: 5%; 
+    margin-left: 0; 
 }
 
 .tp_icap_title li {
-    margin-bottom: 10px; /* Adds space between list items */
+    margin-bottom: 10px; 
 }
 
 .text-container {
     display: flex;
-    align-items: center; /* Aligns items vertically */
+    align-items: center; 
 }
 
 .text-image {
-    margin-right: 2%; /* Space between the image and the text */
-    border-radius: 50%; /* Makes the image circular */
+    margin-right: 2%; 
+    border-radius: 50%; 
 }
 
 #tp_icap_title h4 {
-    margin: 0; /* Removes default margins from the heading */
+    margin: 0; 
 }
 
 #tp_icap_text {
