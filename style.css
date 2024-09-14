@@ -22,7 +22,7 @@ body {
 #nav_buttons ul li {
     margin: 0 75px; /* Adds spacing between links */
     padding: 0.5%;
-    border: 2px, solid white;
+    border: 5%, solid white;
     border-radius: 10%;
 }
 
