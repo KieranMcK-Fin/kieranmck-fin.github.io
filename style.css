@@ -1,4 +1,4 @@
-header {
+/* header {
     background-color: #1B2431;
     color: white;
 }
@@ -112,7 +112,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
+} */
 
 /* display: flex;
 justify-content
@@ -125,3 +125,220 @@ inhaling peacock blue
 #016795
 ordained cobalt
 #1E488F */
+/* Base styles and variables */
+:root {
+    --primary-dark: #1B2431;
+    --primary-blue: #016795;
+    --accent-blue: #1E488F;
+    --text-light: #FAFAD2;
+    --text-lighter: #DCDCDC;
+    --transition-speed: 0.3s;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: var(--primary-blue);
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-lighter);
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styles */
+#nav_buttons ul {
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+#nav_buttons ul li {
+    margin: 0;
+    padding: 0;
+}
+
+#nav_buttons a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: all var(--transition-speed) ease;
+}
+
+#nav_buttons a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+/* Main content styles */
+#main_article {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--text-lighter);
+}
+
+/* Title and header section styles */
+#main_article h4:first-child {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+#main_article h1 {
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+#main_article h3 {
+    font-size: 1.5em;
+    margin-bottom: 2.5rem;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+#main_article p {
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+/* Profile image styles */
+#image {
+    border-radius: 50%;
+    border: 4px solid var(--text-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed) ease;
+    margin: 3rem 0;
+    display: block;
+}
+
+#image:hover {
+    transform: scale(1.05);
+}
+
+/* Education section styles */
+#education {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+#at_a_glance {
+    margin-bottom: 2rem;
+}
+
+.underscore_line {
+    border: none;
+    border-top: 3px solid var(--text-light);
+    opacity: 0.6;
+    margin: 1.5rem 0;
+}
+
+/* Education lists styling */
+#gcses, #a_levels, #degree {
+    margin-bottom: 1.5rem;
+}
+
+.custom-bullets {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.custom-bullets li {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.custom-bullets li:before {
+    content: "•";
+    color: var(--text-light);
+    position: absolute;
+    left: -1rem;
+}
+
+/* TP ICAP section styles */
+.tp_icap_title {
+    margin: 2rem 0;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.text-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#tp_icap_text {
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--accent-blue);
+    color: var(--text-light);
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #nav_buttons ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #main_article {
+        padding: 1rem;
+    }
+
+    .text-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #main_article h1 {
+        font-size: 2em;
+    }
+
+    #main_article h3 {
+        font-size: 1.2em;
+    }
+}
