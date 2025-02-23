@@ -43,7 +43,7 @@ header {
     list-style: none;
     display: flex;
     gap: 1rem;
-    justify-content: center; /* Change from flex-start to center */
+    justify-content: center;
     align-items: center;
     padding: 0 2rem;
     flex-wrap: wrap;
@@ -89,14 +89,6 @@ article:last-child {
 }
 
 /* Headers */
-article header {
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    position: static;
-    margin-bottom: 1.5rem;
-}
-
 article h2 {
     font-size: 2.5em;
     color: var(--text-light);
@@ -110,36 +102,39 @@ article h2 {
 article h4 {
     font-size: 1.4em;
     color: var(--text-light);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-weight: 600;
     letter-spacing: 0.5px;
-}
-
-/* Year sections */
-#year_2, #year_3 {
-    margin-top: 2rem;
-}
-
-/* Paragraphs */
-article p {
-    font-size: 1.15em;
-    line-height: 1.8;
     max-width: 800px;
-    margin: 0 auto 1.5rem;
-    color: var(--text-lighter);
 }
 
-article p:last-child {
-    margin-bottom: 0;
+/* Certificate Images Container */
+#bloomberg {
+    display: flex;
+    justify-content: center;
 }
 
-/* Hover effects */
-article {
-    transition: transform var(--transition-speed) ease;
+#bloomberg article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
 }
 
-article:hover {
+/* Certificate Images */
+#image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+#image:hover {
     transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive design */
@@ -147,6 +142,11 @@ article:hover {
     #main-nav ul {
         gap: 1rem;
         justify-content: center;
+    }
+    
+    #image {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -184,13 +184,8 @@ article:hover {
         font-size: 1.2em;
     }
 
-    article p {
-        font-size: 1.1em;
-        line-height: 1.6;
-    }
-
-    #year_2, #year_3 {
-        margin-top: 1rem;
+    #bloomberg article {
+        padding: 1.5rem;
     }
 }
 
@@ -211,5 +206,10 @@ article:hover {
 
     .navbutton {
         display: none;
+    }
+
+    #image {
+        max-width: 100%;
+        page-break-inside: avoid;
     }
 }
