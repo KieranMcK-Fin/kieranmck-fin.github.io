@@ -177,3 +177,80 @@ article:hover {
         display: none;
     }
 }
+
+/* Variables */
+:root {
+    --primary-dark: #1B2431;
+    --primary-blue: #016795;
+    --accent-blue: #1E488F;
+    --text-light: #FAFAD2;
+    --text-lighter: #DCDCDC;
+    --transition-speed: 0.3s;
+    --content-max-width: 1200px;
+    --border-radius: 12px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Existing styles remain the same until image styles */
+
+/* Image Container Styles */
+#pitch {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: rgba(27, 36, 49, 0.8);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform var(--transition-speed) ease;
+    display: flex;
+    justify-content: center;
+}
+
+#pitch:hover {
+    transform: translateY(-4px);
+}
+
+#pitch img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: calc(var(--border-radius) - 4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Update responsive design section */
+@media (max-width: 768px) {
+    /* Existing mobile styles remain */
+
+    #pitch {
+        margin: 1rem 0;
+        padding: 0.75rem;
+    }
+
+    #pitch img {
+        max-height: 300px;
+    }
+}
+
+/* Update print styles section */
+@media print {
+    /* Existing print styles remain */
+
+    #pitch {
+        box-shadow: none;
+        background: none;
+        padding: 0;
+        margin: 1rem 0;
+        page-break-inside: avoid;
+    }
+
+    #pitch img {
+        max-width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+}
+
+/* Rest of existing styles remain the same */

@@ -213,3 +213,75 @@ article:hover {
         display: none;
     }
 }
+
+/* Variables */
+:root {
+    --primary-dark: #1B2431;
+    --primary-blue: #016795;
+    --accent-blue: #1E488F;
+    --text-light: #FAFAD2;
+    --text-lighter: #DCDCDC;
+    --transition-speed: 0.3s;
+    --content-max-width: 1200px;
+    --border-radius: 12px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rest of existing styles remain the same until the new image styles */
+
+/* Image Container Styles */
+#group_photo {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: rgba(27, 36, 49, 0.8);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform var(--transition-speed) ease;
+}
+
+#group_photo:hover {
+    transform: translateY(-4px);
+}
+
+#group_photo img {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    border-radius: calc(var(--border-radius) - 4px);
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add responsive image handling */
+@media (max-width: 768px) {
+    #group_photo {
+        margin: 1rem 0;
+        padding: 0.75rem;
+    }
+
+    #group_photo img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Print styles update */
+@media print {
+    #group_photo {
+        box-shadow: none;
+        background: none;
+        padding: 0;
+        margin: 1rem 0;
+        page-break-inside: avoid;
+    }
+
+    #group_photo img {
+        max-width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+}
+
+/* Rest of your existing styles remain the same */

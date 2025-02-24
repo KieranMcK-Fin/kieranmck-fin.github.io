@@ -1,0 +1,199 @@
+/* Variables */
+:root {
+    --primary-dark: #1B2431;
+    --primary-blue: #016795;
+    --accent-blue: #1E488F;
+    --text-light: #FAFAD2;
+    --text-lighter: #DCDCDC;
+    --transition-speed: 0.3s;
+    --content-max-width: 1200px;
+    --border-radius: 12px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body { 
+    background-color: var(--primary-blue);
+    background-image: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-lighter);
+    min-height: 100vh;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--primary-dark);
+    padding: 1rem 0;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 1rem;
+}
+
+.navbutton {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.navbutton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content */
+main {
+    max-width: var(--content-max-width);
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+article {
+    background-color: rgba(27, 36, 49, 0.8);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+}
+
+article h2 {
+    font-size: 2.5em;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+article p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    color: var(--text-lighter);
+    margin-bottom: 1rem;
+}
+
+/* Refinitiv Certificate Image Styles */
+#refinitiv_certificate {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(27, 36, 49, 0.8);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+#refinitiv_certificate img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+#refinitiv_certificate img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+    nav ul {
+        justify-content: center;
+    }
+    
+    #refinitiv_certificate img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .navbutton {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0 1rem;
+    }
+
+    article {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    article h2 {
+        font-size: 2em;
+    }
+
+    #refinitiv_certificate {
+        padding: 1.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    article, #refinitiv_certificate {
+        box-shadow: none;
+        background: none;
+        padding: 0;
+        margin-bottom: 1rem;
+        page-break-inside: avoid;
+    }
+
+    .navbutton {
+        display: none;
+    }
+
+    #refinitiv_certificate img {
+        max-width: 100%;
+        page-break-inside: avoid;
+        box-shadow: none;
+    }
+}

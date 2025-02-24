@@ -215,3 +215,104 @@ footer {
         font-size: 1.2em;
     }
 }
+
+/* Existing styles remain the same until TP ICAP section */
+
+/* TP ICAP Experience Section Layout */
+.tp_icap_experience {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: start;
+}
+
+#tp_icap_text {
+    grid-column: 1;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease;
+}
+
+#tp_icap_text:hover {
+    transform: translateY(-4px);
+}
+
+/* TP ICAP Photo Styling */
+.tp_icap_photo {
+    grid-column: 2;
+    position: sticky;
+    top: 100px;
+    padding: 1rem;
+    background-color: rgba(27, 36, 49, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform var(--transition-speed) ease;
+}
+
+.tp_icap_photo:hover {
+    transform: translateY(-4px);
+}
+
+.tp_icap_photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tp_icap_photo figcaption {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* Update responsive design section */
+@media (max-width: 968px) {
+    .tp_icap_experience {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .tp_icap_photo {
+        position: static;
+        grid-column: 1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #tp_icap_text {
+        padding: 1.5rem;
+    }
+
+    .tp_icap_photo {
+        padding: 0.75rem;
+    }
+}
+
+/* Update print styles */
+@media print {
+    .tp_icap_experience {
+        display: block;
+    }
+
+    #tp_icap_text, .tp_icap_photo {
+        box-shadow: none;
+        background: none;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .tp_icap_photo img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
